@@ -1,0 +1,25 @@
+﻿@foreach (var department in Model)
+{
+    <h2>@department.Name</h2>
+    <p>Number of Users: @department.Count</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in department.ApplicationUsers)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

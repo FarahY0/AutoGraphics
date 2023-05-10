@@ -1,0 +1,69 @@
+﻿
+@model AutoGraphic.Models.ApplicationUser
+
+@{
+    Layout = null;
+}
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>AutoGraphic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Account/css/style.css">
+
+</head>
+<body class="img js-fullheight" style="background-image: url(images/FF.jpg); height:100%;width:100%;">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <h3 class="mb-4 text-center">Edit Profile</h3>
+
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="UserName">Username</label>
+                            <input asp-for="UserName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ProfileImage">Profile Image</label>
+                            <input type="file" asp-for="ProfileImage" class="form-control-file" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            @Html.DisplayFor(model => model.Email)
+                        </div>
+                        <div class="form-group">
+                            <label for="PhoneNumber">Phone Number</label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                        </div>
+                        <div>
+                            <h6>Department Name: @ViewData["DepartmentName"]</h6>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Account/js/jquery.min.js"></script>
+    <script src="~/Account/js/popper.js"></script>
+    <script src="~/Account/js/bootstrap.min.js"></script>
+    <script src="~/Account/js/main.js"></script>
+
+</body>
+</html>
+
+

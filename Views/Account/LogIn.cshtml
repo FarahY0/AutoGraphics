@@ -1,0 +1,76 @@
+﻿@model AutoGraphic.Models.ViewModels.LogInViewModel
+
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>AutoGraphic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Account/css/style.css">
+
+</head>
+<body class="img js-fullheight" style="background-image: url(images/FF.jpg); height: 100%; width: 100%; ">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4" style="text-align:center ;padding-top:200px;">
+                <div class="login-wrap p-0">
+                    <h3 class="mb-4 text-center">Sign In</h3>
+                    <form asp-action="LogIn" class="signin-form">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="UsernameOrEmail" class="control-label"></label>
+                            <input asp-for="UsernameOrEmail" class="form-control" />
+                            <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                       
+                       
+                        <div class="form-group">
+                            <input type="submit" asp-action="Index" asp-controller="Home" asp-area="Dashboard" value="Sgin In" class="form-control btn btn-primary submit px-3" />
+                        </div>
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+
+                                <label class="checkbox-wrap checkbox-primary">
+
+                                    <input type="checkbox" class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="w-50 text-md-right">
+                                <a asp-action="ChangePassword" style="color: #fff">Change Password</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Account/js/jquery.min.js"></script>
+    <script src="~/Account/js/popper.js"></script>
+    <script src="~/Account/js/bootstrap.min.js"></script>
+    <script src="~/Account/js/main.js"></script>
+
+</body>
+</html>

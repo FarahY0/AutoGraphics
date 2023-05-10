@@ -1,0 +1,252 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui;
+}
+.page-container{
+    display: flex;
+    height: 100vh;
+}
+.page-container > div{
+    flex: 1;
+}
+
+.page-left-section{
+    background: url(../images/airport.jpg) center;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.left-section-inner-box{
+    background-color: #ffffff75;
+    padding: 16px;
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid #ffffff8a;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    justify-content: center;
+    align-items: center;
+}
+.left-section-inner-box-logo{
+    width: 200px;
+    height: 200px;
+}
+.left-section-inner-box-text{
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+}
+.page-right-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.page-right-section-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.page-right-section-login{
+    font-size: 30px;
+    font-weight: bold;
+    
+} 
+.right-section-logo{
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+
+.page-right-section-Q{
+    color: gray;
+    font-size: 15px;
+}
+
+.page-right-section-signup-link{
+    color: #377dff;
+    text-decoration: none;
+    font-size: 15px;
+    }
+.page-right-section-signup-link:active{
+color: #377dff;
+}
+@media screen and (max-width: 991px) {
+  .page-left-section{
+    display: none;
+  } 
+  .signup-page-left-section{
+    display: none !important;
+  }
+  .right-section-logo{
+    display: block;
+  }
+  
+  }
+
+  .page-right-section-form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    
+  }
+
+  .page-right-section-form-input{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+    outline: none!important;
+    text-align: end;
+    padding: 3px 5px;
+
+
+  } 
+  .page-right-section-form-label{
+    font-size: 15px;
+    align-self: end;
+  }
+
+  .page-right-section-form-input:focus{
+    border:1px solid  #b1adad;
+    box-shadow: 0 0 10px #a5acb3;
+ }
+
+ .page-right-section-checkbox{
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: end;
+    gap: 10px;
+ }
+ .page-right-section-checkbox-box{
+    
+    height: 15px;
+    width: 15px;
+    accent-color: #00c9a7;
+    box-shadow: 0 0 5px #8fe3d5;
+}
+.page-right-section-checbox-label{
+    font-size: 14;
+    color:gray;
+}
+.page-right-section-password{
+    display: flex;
+    align-self: end;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+
+}
+.btn{
+    width: 420px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #377dff;
+    outline: none!important;
+    font-size: 15px;
+    background-color: #377dff;
+    color: #fff;
+       
+}
+      .btn:hover {
+        background-color: #306bd9;
+        color: white;
+        box-shadow: 0 0 3px #306bd9;
+      }
+
+      .signup-page-container{
+        display: flex;
+        height: 100vh;
+    }
+    .signup-page-container > div{
+        flex: 1;
+    }
+    .signup-page-left-section{
+        background: url(../images/street.jpg) center;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .signup-page-right-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    
+    }
+    .list{
+        width: 400px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #c9c9c9;
+        outline: none!important;
+        appearance: none;
+        text-align: end;
+        padding: 10px;
+    }
+    .birth-list{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+    .date-list{
+        width: 120px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #c9c9c9;
+        outline: none!important;
+        appearance: none;
+        text-align: end;
+        padding: 10px;
+    }
+
+    .nationality-num{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .page-right-section-form-input-num{
+     width: 185px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+    outline: none!important;
+    text-align: end;
+    padding: 3px 5px;
+    }
+      
+    
+    .arrow {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        position: absolute;
+        left: 13px;
+        bottom: 17px;
+      } 
+      .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      } 
+      .relative-component{
+        position: relative;
+      }
